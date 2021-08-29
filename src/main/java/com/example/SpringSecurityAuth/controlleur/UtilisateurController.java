@@ -1,21 +1,28 @@
 package com.example.SpringSecurityAuth.controlleur;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.catalina.User;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.annotation.security.RolesAllowed;
+import java.net.URI;
 
 @RestController
 public class UtilisateurController {
-    @RequestMapping("/*")
-    @RolesAllowed("USER")
-    public String getUser(){
-        return "welcom, user";
+
+    @GetMapping("/hello")
+    public String getHello() {
+        return "<h1>Hello World</h1>";
     }
-    @RequestMapping("/admin")
-    @RolesAllowed("ADMIN")
-    public String getAdmin(){
-        return "welcom, admin";
+
+    @GetMapping("/user")
+    public String getUser() {
+        return "<h1>Hello User</h1>";
+    }
+
+    @GetMapping("/admin")
+    public String getAdmin() {
+        return "<h1>Hello Admin</h1>";
     }
 }
