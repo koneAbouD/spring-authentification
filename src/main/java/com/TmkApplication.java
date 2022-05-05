@@ -1,13 +1,13 @@
-package com.example.SpringSecurityAuth;
+package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringSecurityAuthApplication {
+public class TmkApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityAuthApplication.class, args);
+		SpringApplication.run(TmkApplication.class, args);
 	}
 
 }

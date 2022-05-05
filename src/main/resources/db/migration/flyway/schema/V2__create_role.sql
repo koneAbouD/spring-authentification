@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS roles;
+CREATE TABLE roles
+(
+    id SERIAL CONSTRAINT role_pk PRIMARY KEY ,
+    name VARCHAR(255) NOT NULL,
+    version INT8 NOT NULL DEFAULT 0
+);
